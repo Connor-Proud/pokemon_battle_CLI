@@ -1,0 +1,98 @@
+name,id,accuracy,pp,power,priority,type,generation,short_descripton,damage_class
+Pound,1,100.0,35,40.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Karate Chop,2,100.0,25,50.0,0,Fighting,Generation I,Has an increased chance for a critical hit.,Physical
+Double Slap,3,85.0,10,15.0,0,Normal,Generation I,Hits 2-5 times in one turn.,Physical
+Comet Punch,4,85.0,15,18.0,0,Normal,Generation I,Hits 2-5 times in one turn.,Physical
+Mega Punch,5,85.0,20,80.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Pay Day,6,100.0,20,40.0,0,Normal,Generation I,Scatters money on the ground worth five times the user's level.,Physical
+Fire Punch,7,100.0,15,75.0,0,Fire,Generation I,Has a $effect_chance% chance to burn the target.,Physical
+Ice Punch,8,100.0,15,75.0,0,Ice,Generation I,Has a $effect_chance% chance to freeze the target.,Physical
+Thunder Punch,9,100.0,15,75.0,0,Electric,Generation I,Has a $effect_chance% chance to paralyze the target.,Physical
+Scratch,10,100.0,35,40.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Vice Grip,11,100.0,30,55.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Razor Wind,12,100.0,10,80.0,0,Normal,Generation I,Requires a turn to charge before attacking.,Special
+Cut,13,95.0,30,50.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Gust,14,100.0,35,40.0,0,Flying,Generation I,Inflicts regular damage and can hit Pokémon in the air.,Special
+Wing Attack,15,100.0,35,60.0,0,Flying,Generation I,Inflicts regular damage with no additional effect.,Physical
+Fly,16,95.0,15,90.0,0,Flying,Generation I,"User flies high into the air, dodging all attacks, and hits next turn.",Physical
+Bind,17,85.0,20,15.0,0,Normal,Generation I,Prevents the target from fleeing and inflicts damage for 2-5 turns.,Physical
+Slam,18,75.0,20,80.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Vine Whip,19,100.0,25,45.0,0,Grass,Generation I,Inflicts regular damage with no additional effect.,Physical
+Stomp,20,100.0,20,65.0,0,Normal,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Double Kick,21,100.0,30,30.0,0,Fighting,Generation I,Hits twice in one turn.,Physical
+Mega Kick,22,75.0,5,120.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Jump Kick,23,95.0,10,100.0,0,Fighting,Generation I,"If the user misses, it takes half the damage it would have inflicted in recoil.",Physical
+Rolling Kick,24,85.0,15,60.0,0,Fighting,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Headbutt,25,100.0,15,70.0,0,Normal,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Horn Attack,26,100.0,25,65.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Fury Attack,27,85.0,20,15.0,0,Normal,Generation I,Hits 2-5 times in one turn.,Physical
+Tackle,28,100.0,35,40.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Body Slam,29,100.0,15,85.0,0,Normal,Generation I,Has a $effect_chance% chance to paralyze the target.,Physical
+Wrap,30,90.0,20,15.0,0,Normal,Generation I,Prevents the target from fleeing and inflicts damage for 2-5 turns.,Physical
+Take Down,31,85.0,20,90.0,0,Normal,Generation I,User receives 1/4 the damage it inflicts in recoil.,Physical
+Thrash,32,100.0,10,120.0,0,Normal,Generation I,"Hits every turn for 2-3 turns, then confuses the user.",Physical
+Double Edge,33,100.0,15,120.0,0,Normal,Generation I,User receives 1/3 the damage inflicted in recoil.,Physical
+Poison Sting,34,100.0,35,15.0,0,Poison,Generation I,Has a $effect_chance% chance to poison the target.,Physical
+Twineedle,35,100.0,20,25.0,0,Bug,Generation I,Hits twice in the same turn.  Has a $effect_chance% chance to poison the target.,Physical
+Pin Missile,36,95.0,20,25.0,0,Bug,Generation I,Hits 2-5 times in one turn.,Physical
+Bite,37,100.0,25,60.0,0,Dark,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Acid,38,100.0,30,40.0,0,Poison,Generation I,Has a $effect_chance% chance to lower the target's Special Defense by one stage.,Special
+Ember,39,100.0,25,40.0,0,Fire,Generation I,Has a $effect_chance% chance to burn the target.,Special
+Flamethrower,40,100.0,15,90.0,0,Fire,Generation I,Has a $effect_chance% chance to burn the target.,Special
+Water Gun,41,100.0,25,40.0,0,Water,Generation I,Inflicts regular damage with no additional effect.,Special
+Hydro Pump,42,80.0,5,110.0,0,Water,Generation I,Inflicts regular damage with no additional effect.,Special
+Surf,43,100.0,15,90.0,0,Water,Generation I,Inflicts regular damage and can hit Dive users.,Special
+Ice Beam,44,100.0,10,90.0,0,Ice,Generation I,Has a $effect_chance% chance to freeze the target.,Special
+Blizzard,45,70.0,5,110.0,0,Ice,Generation I,Has a $effect_chance% chance to freeze the target.,Special
+Psybeam,46,100.0,20,65.0,0,Psychic,Generation I,Has a $effect_chance% chance to confuse the target.,Special
+Bubble Beam,47,100.0,20,65.0,0,Water,Generation I,Has a $effect_chance% chance to lower the target's Speed by one stage.,Special
+Aurora Beam,48,100.0,20,65.0,0,Ice,Generation I,Has a $effect_chance% chance to lower the target's Attack by one stage.,Special
+Hyper Beam,49,90.0,5,150.0,0,Normal,Generation I,User foregoes its next turn to recharge.,Special
+Peck,50,100.0,35,35.0,0,Flying,Generation I,Inflicts regular damage with no additional effect.,Physical
+Drill Peck,51,100.0,20,80.0,0,Flying,Generation I,Inflicts regular damage with no additional effect.,Physical
+Submission,52,80.0,20,80.0,0,Fighting,Generation I,User receives 1/4 the damage it inflicts in recoil.,Physical
+Strength,53,100.0,15,80.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Absorb,54,100.0,25,20.0,0,Grass,Generation I,Drains half the damage inflicted to heal the user.,Special
+Mega Drain,55,100.0,15,40.0,0,Grass,Generation I,Drains half the damage inflicted to heal the user.,Special
+Razor Leaf,56,95.0,25,55.0,0,Grass,Generation I,Has an increased chance for a critical hit.,Physical
+Solar Beam,57,100.0,10,120.0,0,Grass,Generation I,Requires a turn to charge before attacking.,Special
+Petal Dance,58,100.0,10,120.0,0,Grass,Generation I,"Hits every turn for 2-3 turns, then confuses the user.",Special
+Fire Spin,59,85.0,15,35.0,0,Fire,Generation I,Prevents the target from fleeing and inflicts damage for 2-5 turns.,Special
+Thunder Shock,60,100.0,30,40.0,0,Electric,Generation I,Has a $effect_chance% chance to paralyze the target.,Special
+Thunderbolt,61,100.0,15,90.0,0,Electric,Generation I,Has a $effect_chance% chance to paralyze the target.,Special
+Thunder,62,70.0,10,110.0,0,Electric,Generation I,Has a $effect_chance% chance to paralyze the target.,Special
+Rock Throw,63,90.0,15,50.0,0,Rock,Generation I,Inflicts regular damage with no additional effect.,Physical
+Earthquake,64,100.0,10,100.0,0,Ground,Generation I,Inflicts regular damage and can hit Dig users.,Physical
+Dig,65,100.0,10,80.0,0,Ground,Generation I,"User digs underground, dodging all attacks, and hits next turn.",Physical
+Confusion,66,100.0,25,50.0,0,Psychic,Generation I,Has a $effect_chance% chance to confuse the target.,Special
+Psychic,67,100.0,10,90.0,0,Psychic,Generation I,Has a $effect_chance% chance to lower the target's Special Defense by one stage.,Special
+Quick Attack,68,100.0,30,40.0,1,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Rage,69,100.0,20,20.0,0,Normal,Generation I,"If the user is hit after using this move, its Attack rises by one stage.",Physical
+Self Destruct,70,100.0,5,200.0,0,Normal,Generation I,User faints.,Physical
+Egg Bomb,71,75.0,10,100.0,0,Normal,Generation I,Inflicts regular damage with no additional effect.,Physical
+Lick,72,100.0,30,30.0,0,Ghost,Generation I,Has a $effect_chance% chance to paralyze the target.,Physical
+Smog,73,70.0,20,30.0,0,Poison,Generation I,Has a $effect_chance% chance to poison the target.,Special
+Sludge,74,100.0,20,65.0,0,Poison,Generation I,Has a $effect_chance% chance to poison the target.,Special
+Bone Club,75,85.0,20,65.0,0,Ground,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Fire Blast,76,85.0,5,110.0,0,Fire,Generation I,Has a $effect_chance% chance to burn the target.,Special
+Waterfall,77,100.0,15,80.0,0,Water,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Clamp,78,85.0,15,35.0,0,Water,Generation I,Prevents the target from fleeing and inflicts damage for 2-5 turns.,Physical
+Swift,79,,20,60.0,0,Normal,Generation I,Never misses.,Special
+Skull Bash,80,100.0,10,130.0,0,Normal,Generation I,Raises the user's Defense by one stage.  User charges for one turn before attacking.,Physical
+Spike Cannon,81,100.0,15,20.0,0,Normal,Generation I,Hits 2-5 times in one turn.,Physical
+Constrict,82,100.0,35,10.0,0,Normal,Generation I,Has a $effect_chance% chance to lower the target's Speed by one stage.,Physical
+High Jump Kick,83,90.0,10,130.0,0,Fighting,Generation I,"If the user misses, it takes half the damage it would have inflicted in recoil.",Physical
+Dream Eater,84,100.0,15,100.0,0,Psychic,Generation I,Only works on sleeping Pokémon.  Drains half the damage inflicted to heal the user.,Special
+Barrage,85,85.0,20,15.0,0,Normal,Generation I,Hits 2-5 times in one turn.,Physical
+Leech Life,86,100.0,10,80.0,0,Bug,Generation I,Drains half the damage inflicted to heal the user.,Physical
+Sky Attack,87,90.0,5,140.0,0,Flying,Generation I,User charges for one turn before attacking.  Has a $effect_chance% chance to make the target flinch.,Physical
+Bubble,88,100.0,30,40.0,0,Water,Generation I,Has a $effect_chance% chance to lower the target's Speed by one stage.,Special
+Dizzy Punch,89,100.0,10,70.0,0,Normal,Generation I,Has a $effect_chance% chance to confuse the target.,Physical
+Crabhammer,90,90.0,10,100.0,0,Water,Generation I,Has an increased chance for a critical hit.,Physical
+Explosion,91,100.0,5,250.0,0,Normal,Generation I,User faints.,Physical
+Fury Swipes,92,80.0,15,18.0,0,Normal,Generation I,Hits 2-5 times in one turn.,Physical
+Bonemerang,93,90.0,10,50.0,0,Ground,Generation I,Hits twice in one turn.,Physical
+Rock Slide,94,90.0,10,75.0,0,Rock,Generation I,Has a $effect_chance% chance to make the target flinch.,Physical
+Tri Attack,95,100.0,10,80.0,0,Normal,Generation I,"Has a $effect_chance% chance to burn, freeze, or paralyze the target.",Special
+Slash,96,100.0,20,70.0,0,Normal,Generation I,Has an increased chance for a critical hit.,Physical
+Struggle,97,,1,50.0,0,Normal,Generation I,User takes 1/4 its max HP in recoil.,Physical
