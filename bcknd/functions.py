@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from random import randint,choice
 
@@ -64,19 +65,149 @@ from random import randint,choice
 #         return "miss"
 #     return int(dmg_dealt)
 
+def playsound(move_name: str):
+    """Play the sound effect for a Pokémon move.
+
+    Args:
+        move_name (str): holy shit it works, just put the move name in bruh
+    """
+    import os
+    import subprocess
+    try:
+        # Go up one level from bcknd/ to the root directory, then into files/sounds/
+        DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        file = os.path.join(DIR, "files", "sounds", f"{move_name}.wav")
+        
+        # Use Windows' built-in sound player in a non-blocking way
+        if os.path.exists(file):
+            subprocess.Popen(['powershell', '-c', f'(New-Object Media.SoundPlayer "{file}").PlaySync()'], 
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+            print(f"Sound file not found for move: {move_name}")
+    except Exception as e:
+        print(f"Error playing sound: {e}")
+
+
+def play_hit_sound(damage: int):
+    """Play hit sound based on damage dealt to player.
+    
+    Args:
+        damage (int): Amount of damage dealt
+    """
+    import os
+    import subprocess
+    try:
+        # Go up one level from bcknd/ to the root directory, then into files/sounds/
+        DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
+        if damage <= 5:
+            sound_file = "IMHITWEAK_Not_Very_Effective.wav"
+        elif damage <= 11:
+            sound_file = "IMHIT_Damage.wav"
+        else:  # 12+
+            sound_file = "IMHITSUPER_Super_Effective.wav"
+        
+        file_path = os.path.join(DIR, "files", "sounds", sound_file)
+        
+        # Use Windows' built-in sound player in a non-blocking way
+        if os.path.exists(file_path):
+            subprocess.Popen(['powershell', '-c', f'(New-Object Media.SoundPlayer "{file_path}").PlaySync()'], 
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+            print(f"Hit sound file not found: {sound_file}")
+    except Exception as e:
+        print(f"Error playing hit sound: {e}")
 
 
 
 
+def get_pokemon_moves(pokemon_name: str) -> list:
+    import os
+    # Go up one level from bcknd/ to the root directory, then into files/
+    DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    try:
+        # Read the capable_moves CSV file
+        df = pd.read_csv(os.path.join(DIR, "files", "capable_moves.csv"))
+        # Normalize the pokemon name (capitalize first letter)
+        pokemon_name = pokemon_name.capitalize()
+        # Find the row for the specified Pokémon
+        pokemon_row = df[df["pokemon"] == pokemon_name]
+        if pokemon_row.empty:
+            print(f"Warning: Pokémon '{pokemon_name}' not found in capable_moves.csv")
+            return []
+        moves_string = pokemon_row["moves"].iloc[0]
+        moves_list = [move.strip() for move in moves_string.split(",")]
+        
+        return moves_list
+        
+    except FileNotFoundError:
+        print("Error: capable_moves.csv file not found in files/ directory")
+        return []
+    except Exception as e:
+        print(f"Error reading capable_moves.csv: {e}")
+        return []
+
+
+def get_random_pokemon() -> str:
+    import os
+    # Go up one level from bcknd/ to the root directory, then into files/
+    DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    try:
+        df = pd.read_csv(os.path.join(DIR, "files", "pokemon.csv"))
+        pokemon_list = df[" Name"].tolist()
+        return choice(pokemon_list).strip()
+    except FileNotFoundError:
+        print("Error: pokemon.csv file not found in files/ directory")
+        return "MissingNo"
+    except Exception as e:
+        print(f"Error reading pokemon.csv: {e}")
+        return "MissingNo"
 
 
 
+def get_move_data(move_name: str) -> dict:
+    """Get move data including PP from moves.csv"""
+    import os
+    # Go up one level from bcknd/ to the root directory, then into files/
+    DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    try:
+        df = pd.read_csv(os.path.join(DIR, "files", "moves.csv"))
+        move_row = df[df["name"] == move_name]
+        if move_row.empty:
+            print(f"Warning: Move '{move_name}' not found in moves.csv")
+            return {"name": move_name, "pp": 10}  # Default PP if not found
+        
+        return {
+            "name": move_name,
+            "pp": int(move_row["pp"].iloc[0]),
+            "power": move_row["power"].iloc[0],
+            "accuracy": move_row["accuracy"].iloc[0],
+            "type": move_row["type"].iloc[0]
+        }
+    except FileNotFoundError:
+        print("Error: moves.csv file not found in files/ directory")
+        return {"name": move_name, "pp": 10}
+    except Exception as e:
+        print(f"Error reading moves.csv: {e}")
+        return {"name": move_name, "pp": 10}
 
 
-
-
-
-
+def initialize_pokemon_moves_with_pp(pokemon_name: str) -> dict:
+    """Initialize a Pokemon's moves with their maximum PP"""
+    moves_list = get_pokemon_moves(pokemon_name)
+    moves_with_pp = {}
+    
+    for move in moves_list:
+        move_data = get_move_data(move)
+        moves_with_pp[move] = {
+            "current_pp": move_data["pp"],
+            "max_pp": move_data["pp"],
+            "power": move_data.get("power", 0),
+            "accuracy": move_data.get("accuracy", 100),
+            "type": move_data.get("type", "Normal")
+        }
+    
+    return moves_with_pp
 
 
 # if __name__ == "__main__":
@@ -85,3 +216,4 @@ from random import randint,choice
 # ╰────────────────────╯""")
 # else:
 #     print("here is the import")
+

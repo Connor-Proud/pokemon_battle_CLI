@@ -1,9 +1,13 @@
+import os
+DIR= os.path.dirname(os.path.abspath(__file__))
+
+
 def user_create(username:str,password:str,pokemon_team: list) -> str:
     import bcrypt
     import sqlite3
     salt = bcrypt.gensalt()
     hashed = bcrypt.hashpw(password.encode(), salt)
-    conn = sqlite3.connect("pokemon_users.db")
+    conn = sqlite3.connect(f"{DIR}/pokemon_users.db")
     cur = conn.cursor()
     pokemon_team += [None] * (6 - len(pokemon_team))  #pad with None if fewer than 6
     
@@ -21,7 +25,7 @@ def user_create(username:str,password:str,pokemon_team: list) -> str:
 def login_user(username, password):
     import bcrypt
     import sqlite3
-    conn = sqlite3.connect("pokemon_users.db")
+    conn = sqlite3.connect(f"{DIR}/pokemon_users.db")
     cur = conn.cursor()
     cur.execute("SELECT password_hash, pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6 FROM users WHERE username = ?", (username,))
     row = cur.fetchone()
