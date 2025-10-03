@@ -659,7 +659,7 @@ def main_battle(pokemon_choice, opp, team, position, username):
                     break
     
     # Final message
-    console.print("\n[dim]Press any key to continue...[/dim]")
+    console.print("\n[dim]Press enter to continue...[/dim]")
     console.input("")
 
     # Battle conclusion - determine if player won
