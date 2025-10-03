@@ -449,7 +449,7 @@ def main_battle(pokemon_choice, opp, team, position, username):
     def choose_next_pokemon():
         """Let player choose their next Pokemon after one faints"""
         available = get_available_pokemon()
-        if len(available) <= 1:  # Only current Pokemon or no Pokemon left
+        if len(available) <= 0:  # Only current Pokemon or no Pokemon left
             return None
             
         console.print(Panel("[yellow]Choose your next Pokémon![/yellow]", title="Switch Pokémon", border_style="yellow"))
