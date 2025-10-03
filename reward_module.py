@@ -35,9 +35,3 @@ def get_reward():
     print(f'total pokecoins: {pokecoins}')
     with open('testfile.txt', 'w') as f:
         f.write(str(pokecoins))
-        
-# testing the code innit (simulates winning/losing 10 battles)
-for i in range(10):
-    win = choice([True,False])
-    opp_hp = randint(10,100)
-    get_reward()
